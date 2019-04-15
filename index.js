@@ -84,6 +84,6 @@ app.post('/channels', function(req, res, next) {
 	res.json(channels)
 })
 
-app.listen(3000, function() {
-	console.log('Server ready on port 3000');
+app.listen(process.env.PORT || 3000, function() {
+	console.log('Server ready on port 3000 or default');
 })
