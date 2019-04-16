@@ -1,10 +1,5 @@
 const express = require('express')
 const body_parser = require('body-parser')
-const mongoose = require('mongoose')
-
-mongoose.connect('mongodb://localhost:27017/test_mongo', {useNewUrlParser: true}, function() {
-	console.log('Connected to MongoDB');
-})
 
 const app = express()
 
