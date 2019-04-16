@@ -47,6 +47,8 @@ app.get('/channels', require('./controllers/channels_read'))
 
 app.get('/channels/:name', require('./controllers/channel_read'))
 
+app.post('/channels', require('./controllers/channel_create'))
+
 // app.get('/channels/:id', function(req, res, next) {
 // 	console.log('You\'re looking for channel: ' + req.params.id);
 // 	let channels = [{
@@ -68,25 +70,25 @@ app.get('/channels/:name', require('./controllers/channel_read'))
 // 	res.json(channel)
 // })
 
-app.post('/channels', function(req, res, next) {
-	console.log('Thank you for your POST request at /channels');
-	console.log('The new channel is' + req.body);
-	let channels = [{
-		id: 1,
-		name: 'general'
-	}, {
-		id: 2,
-		name: 'random'
-	}, {
-		id: 3,
-		name: 'private'
-	}, {
-		id: 4,
-		name: 'fun'
-	}]
-	channels.push(req.body)
-	res.json(channels)
-})
+// app.post('/channels', function(req, res, next) {
+// 	console.log('Thank you for your POST request at /channels');
+// 	console.log('The new channel is' + req.body);
+// 	let channels = [{
+// 		id: 1,
+// 		name: 'general'
+// 	}, {
+// 		id: 2,
+// 		name: 'random'
+// 	}, {
+// 		id: 3,
+// 		name: 'private'
+// 	}, {
+// 		id: 4,
+// 		name: 'fun'
+// 	}]
+// 	channels.push(req.body)
+// 	res.json(channels)
+// })
 
 app.listen(process.env.PORT || 3000, function() {
 	console.log('Server ready on port 3000 or default');
