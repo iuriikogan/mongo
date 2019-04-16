@@ -49,6 +49,8 @@ app.get('/channels/:name', require('./controllers/channel_read'))
 
 app.post('/channels', require('./controllers/channel_create'))
 
+app.delete('/channels/:name', require('./controllers/channel_delete'))
+
 // app.get('/channels/:id', function(req, res, next) {
 // 	console.log('You\'re looking for channel: ' + req.params.id);
 // 	let channels = [{
