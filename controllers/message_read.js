@@ -4,5 +4,5 @@ module.exports = function(req, res, next) {
 	db_message.findById(req.params.id).then(function(message) {
 		console.log(message);
 		res.status(200).json(message)
-	})
-}
+		})
+	}

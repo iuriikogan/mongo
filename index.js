@@ -7,6 +7,13 @@ const app = express()
 
 app.use(body_parser.json())
 
+app.use(function(err, req, res, next) {
+	console.log("err", err);
+	res.status(400).json({
+		message: err.message
+	})
+})
+
 require('./routes')(app);
 
 // code here
