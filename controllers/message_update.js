@@ -11,6 +11,6 @@ module.exports = function(req, res, next) {
 			new: true
 		}).then(function(updated_message) {
 		console.log(updated_message);
-		res.json(updated_message)
+		res.status(200).json(updated_message)
 	})
 }
