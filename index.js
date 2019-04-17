@@ -7,7 +7,7 @@ const app = express()
 
 app.use(body_parser.json())
 
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
 	console.log("err", err);
 	res.status(400).json({
 		message: err.message
@@ -18,20 +18,20 @@ require('./routes')(app);
 
 // code here
 
-app.get('/', function(req, res, next) {
+app.get('/', function (req, res, next) {
 	// res.send('Hello from the server')
 	res.send('<h1>Hello from the server</h1>')
 })
 
-app.get('/about', function(req, res, next) {
+app.get('/about', function (req, res, next) {
 	res.send('<h1>About us</h1>')
 })
 
-app.get('/contact', function(req, res, next) {
+app.get('/contact', function (req, res, next) {
 	res.sendFile(__dirname + '/contact.html')
 })
 
-app.get('/file', function(req, res, next) {
+app.get('/file', function (req, res, next) {
 	res.download(__dirname + '/notes.txt')
 })
 
@@ -40,7 +40,7 @@ app.get('/file', function(req, res, next) {
 
 
 
-		// at the end
-app.listen(process.env.PORT || 3000, function() {
+// at the end
+app.listen(process.env.PORT || 3000, function () {
 	console.log('Server ready on port 3000 or default');
 })
