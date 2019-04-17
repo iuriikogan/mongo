@@ -43,6 +43,8 @@ app.get('/file', function(req, res, next) {
 // 	res.json(channels)
 // })
 
+	// Channel Schema
+
 app.get('/channels', require('./controllers/channels_read'))
 
 app.get('/channels/:name', require('./controllers/channel_read'))
@@ -52,6 +54,18 @@ app.post('/channels', require('./controllers/channel_create'))
 app.delete('/channels/:name', require('./controllers/channel_delete'))
 
 app.patch('/channels/:name', require('./controllers/channel_update'))
+
+	// messages schema
+
+app.get('/message', require('./controllers/messages_read'))
+
+app.get('/message/:id', require('./controllers/message_read'))
+
+app.post('/message', require('./controllers/message_create.js'))
+
+app.delete('/message/:id', require('./controllers/message_delete'))
+
+app.patch('/message/:id', require('./controllers/message_update'))
 
 // app.get('/channels/:id', function(req, res, next) {
 // 	console.log('You\'re looking for channel: ' + req.params.id);
