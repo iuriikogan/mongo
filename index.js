@@ -23,7 +23,7 @@ app.get('/about', function(req, res, next) {
 app.get('/contact', function(req, res, next) {
 	res.sendFile(__dirname + '/contact.html')
 })
-no
+
 app.get('/file', function(req, res, next) {
 	res.download(__dirname + '/notes.txt')
 })
@@ -31,6 +31,9 @@ app.get('/file', function(req, res, next) {
 
 
 
+
+
+		// at the end
 app.listen(process.env.PORT || 3000, function() {
 	console.log('Server ready on port 3000 or default');
 })

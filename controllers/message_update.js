@@ -2,6 +2,7 @@ const db_message = require('../models/message')
 
 module.exports = function(req, res, next) {
 	db_message.findByIdAndUpdate(
+		req.params.id,
 		{
 			"content" : req.body.content,
 			"likes" : req.body.likes
