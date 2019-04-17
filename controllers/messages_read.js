@@ -1,8 +1,9 @@
 const db_message = require('../models/message')
 
 module.exports = function(req, res, next) {
+	console.log(req.query);
 	db_message
-	.find({})
+	.find({'channel' : req.query.channel})
 	.populate({
 		path: 'channel',
 		select: 'name'
