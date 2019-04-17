@@ -15,6 +15,13 @@ app.use(function (err, req, res, next) {
 })
 
 require('./routes')(app);
+app.use(function (err, req, res, next) {
+	console.log("err", err);
+	res.status(400).json({
+		message: err.message
+	})
+})
+
 
 // code here
 
