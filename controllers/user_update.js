@@ -5,7 +5,7 @@ module.exports = function(req, res, next) {
 		req.params.id,
 		{
 			"name" : req.body.name,
-			"likes" : req.body.
+			"status" : req.body.status
 		},
 		{
 			new: true
