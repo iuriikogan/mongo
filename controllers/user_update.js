@@ -4,8 +4,8 @@ module.exports = function(req, res, next) {
 	db_user.findByIdAndUpdate(
 		req.params.id,
 		{
-			"content" : req.body.content,
-			"status" : req.body.status
+			"name" : req.body.name,
+			"likes" : req.body.
 		},
 		{
 			new: true
