@@ -7,5 +7,4 @@ module.exports = function(req, res, next) {
 		console.log(message);
 		res.status(200).json(message)
 	})
-	
 }
