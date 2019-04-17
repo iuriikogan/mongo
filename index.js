@@ -15,6 +15,7 @@ app.use(function (err, req, res, next) {
 })
 
 require('./routes')(app);
+
 app.use(function (err, req, res, next) {
 	console.log("err", err);
 	res.status(400).json({
@@ -26,7 +27,7 @@ app.use(function (err, req, res, next) {
 // code here
 
 app.get('/', function (req, res, next) {
-	// res.send('Hello from the server')
+	
 	res.send('<h1>Hello from the server</h1>')
 })
 
