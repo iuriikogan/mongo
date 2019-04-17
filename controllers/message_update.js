@@ -1,7 +1,7 @@
 const db_message = require('../models/message')
 
 module.exports = function(req, res, next) {
-	db_message.findOneAndUpdate(
+	db_message.findByIdAndUpdate(
 		{
 			"_id" : req.params.id
 		},
