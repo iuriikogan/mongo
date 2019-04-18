@@ -1,12 +1,13 @@
 const express = require('express')
 const body_parser = require('body-parser')
+const cors = require('cors')
 
 const app = express()
 
 // middleware
 
 app.use(body_parser.json())
-
+app.use(cors())
 app.use(function (err, req, res, next) {
 	console.log("err", err);
 	res.status(400).json({
